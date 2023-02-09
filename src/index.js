@@ -5,7 +5,7 @@ import Music from './Daft-Punk';
 
 
 function getMusic() {
-  Music.getMusic()
+  Music.getTop5()
     .then(function (response) {
       if (response.data) {
         printElements(response);
@@ -17,20 +17,29 @@ function getMusic() {
 
 
 function printElements(response) {
-  console.log(response);
+  for (let i = 0; i < response.data.length; i++) {
+    let pEl = document.createElement("p");
+    pEl.innerText = response.data[i].title;
+    console.log(response.data[i].title);
+    document.querySelector("#top5-div").append(pEl);
+
+  }
 }
 
-function printError(error, city) {
-  document.querySelector('#showResponse').innerText = `There was an error accessing the weather data for ${city}: 
-  ${error}.`;
+function printError() {
+  alert('something went wrong');
 }
 
-function handleFormSubmission(event) {
-  event.preventDefault();
+function handleFormSubmission() {
   getMusic();
-
 }
 
 window.addEventListener("load", function () {
-  document.querySelector('#main').addEventListener("click", handleFormSubmission);
+  if (window.location.href.match('top5.html') != null) {
+    handleFormSubmission();
+
+  }
+
+  // document.querySelector('#top5body').addEventListener("load", handleFormSubmission);
+
 });

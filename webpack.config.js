@@ -21,7 +21,6 @@ module.exports = {
   plugins: [
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
-    
     new HtmlWebpackPlugin({
       title: 'Daft Punk',
       template: './src/index.html',
