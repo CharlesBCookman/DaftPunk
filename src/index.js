@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Music from './Daft-Punk';
 
-
 function getMusic() {
   Music.getTop5()
     .then(function (response) {
@@ -15,14 +14,11 @@ function getMusic() {
     });
 }
 
-
 function printElements(response) {
   for (let i = 0; i < response.data.length; i++) {
     let pEl = document.createElement("p");
     pEl.innerText = response.data[i].title;
-    console.log(response.data[i].title);
     document.querySelector("#top5-div").append(pEl);
-
   }
 }
 
@@ -39,7 +35,5 @@ window.addEventListener("load", function () {
     handleFormSubmission();
 
   }
-
-  // document.querySelector('#top5body').addEventListener("load", handleFormSubmission);
 
 });
