@@ -1,5 +1,5 @@
 {
-  "name": "lizzo",
+  "name": "Daft Punk",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xayananh4/spotify_temp"
+    "url": "git+https://github.com/CharlesBCookman/DaftPunk"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xayananh4/spotify_temp"
+    "url": "https://github.com/CharlesBCookman/DaftPunk"
   },
-  "homepage": "https://github.com/xayananh4/spotify_temp#readme",
+  "homepage": "https://github.com/CharlesBCookman/DaftPunk",
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
